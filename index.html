@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="GOLDILOCS - GENERAL OBJECT-LEVEL DETECTION
+AND LABELING OF CHANGES IN SCENES.">
+  <meta name="keywords" content="SCD, Scene Change Detection">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>GOLDILOCS - GENERAL OBJECT-LEVEL DETECTION
+AND LABELING OF CHANGES IN SCENES.</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -88,32 +90,20 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">GOLDILOCS - GENERAL OBJECT-LEVEL DETECTION
+AND LABELING OF CHANGES IN SCENES.</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://keunhong.com">Almog Friedlander</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://utkarshsinha.com">Ariel Shamir</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://jonbarron.info">Ohad Fried</a><sup>2</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Reichman University,</span>
           </div>
 
           <div class="column has-text-centered">
@@ -258,31 +248,26 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            We propose GOLDILOCS: a novel zero-shot, pose-agnostic method for object-level
+            semantic change detection in the wild. While supervised Scene Change Detection
+            (SCD) methods achieve impressive results on curated datasets, these models do
+            not generalize and performance drops on out-of-domain data. Recent Zero-Shot
+            SCD methods introduced a more robust approach with foundational models as
+            backbone, yet they neglect the 3D aspect of the task and remain constrained to the
+            image-pair setting. Conversely, 3D-centric SCD methods based on 3D Gaussian
+            Splatting (3DGS) or NeRFs require multi-view inputs, but cannot operate on an
+            image pair. Our key insight is that SCD can be reformulated as a 3D reconstruction
+            problem over time, where geometric inconsistencies naturally indicate change.
+            Although previous work considered viewpoint difference a challenge, we recognize
+            the additional geometric information as an advantage. GOLDILOCS uses dense
+            stereo reconstruction to estimate camera parameters and generate a pointmap of the
+            commonalities between input images by filtering geometric inconsistencies. Ren-
+            dering the canonical scene representation from multiple viewpoints yields reference
+            images that exclude changed or occluded content. Rigid object changes are then
+            detected through mask tracking, while nonrigid transformations are identified using
+            SSIM heatmaps. We evaluate our method on a variety of datasets, covering both
+            pairwise and multi-view cases in binary and multi-class settings, and demonstrate
+            superior performance over prior work, including supervised methods.
           </p>
         </div>
       </div>
