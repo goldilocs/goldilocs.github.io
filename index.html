@@ -157,49 +157,59 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+    
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Pairwise Scene Change Detection</h2>
+        <div class="content has-text-justified">
+          <p>
+            We evaluate our method across a diverse set of datasets including both real and simulated environments, 
+            indoor and outdoor scenes, and various types of change. Our results provide color-coded labels 
+    (<span style="color: rgb(0, 141, 199); font-weight: 600;">Added</span>, 
+     <span style="color: rgb(254, 98, 101); font-weight: 600;">Removed</span>, 
+     <span style="color: rgb(67, 170, 139); font-weight: 600;">Moved</span>, 
+     <span style="color: rgb(135, 115, 203); font-weight: 600;">Replaced</span>) even with binary GT and can exceed its accuracy, as annotations are often coarse or miss small changes.
+            These datasets differ in image alignment, 
+            annotation granularity, and in the types of changes they contain: target changes, which correspond 
+            to the object-level modifications we aim to detect, and non-target changes, which arise from 
+            imaging conditions such as illumination, weather, or seasonal variation.
+          </p>
+        </div>
+      </div>
+    </div>
     <div id="results-carousel" 
      class="carousel results-carousel" 
-     data-slides-to-show="1">
-      
-      <div class="item item-layer4">
+     data-slides-to-show="2"> <div class="item item-layer4">
         <img src="./static/images/changesim_0000_Layer-4.png" alt="Layer 4 Reconstruction">
-        <!-- <h2 class="subtitle has-text-centered">Layer 4 Result</h2> -->
-      </div>
+        </div>
 
       <div class="item item-layer3">
         <img src="./static/images/changesim_0001_Layer-3.png" alt="Layer 3 Reconstruction">
-        <!-- <h2 class="subtitle has-text-centered">Layer 3 Result</h2> -->
-      </div>
+        </div>
 
       <div class="item item-layer2">
         <img src="./static/images/changesim_0002_Layer-2.png" alt="Layer 2 Reconstruction">
-        <!-- <h2 class="subtitle has-text-centered">Layer 2 Result</h2> -->
-      </div>
+        </div>
 
       <div class="item item-layer1">
         <img src="./static/images/changesim_0003_Layer-1.png" alt="Layer 1 Reconstruction">
-        <!-- <h2 class="subtitle has-text-centered">Layer 1 Result</h2> -->
-      </div>
+        </div>
       
       <div class="item item-layer4">
         <img src="./static/images/vlcmu_0000_Layer-4.png" alt="Layer 4 Reconstruction">
-        <!-- <h2 class="subtitle has-text-centered">Layer 4 Result</h2> -->
-      </div>
+        </div>
 
       <div class="item item-layer3">
         <img src="./static/images/vlcmu_0001_Layer-3.png" alt="Layer 3 Reconstruction">
-        <!-- <h2 class="subtitle has-text-centered">Layer 3 Result</h2> -->
-      </div>
+        </div>
 
       <div class="item item-layer2">
         <img src="./static/images/vlcmu_0002_Layer-2.png" alt="Layer 2 Reconstruction">
-        <!-- <h2 class="subtitle has-text-centered">Layer 2 Result</h2> -->
-      </div>
+        </div>
 
       <div class="item item-layer1">
         <img src="./static/images/vlcmu_0003_Layer-1.png" alt="Layer 1 Reconstruction">
-        <!-- <h2 class="subtitle has-text-centered">Layer 1 Result</h2> -->
-      </div>
+        </div>
     </div>
   </div>
 </section>
