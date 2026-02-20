@@ -212,35 +212,9 @@
 
 
 
-    
-<style>
-  /* 1. Target both Slick and Bulma-carousel arrow classes */
-  #results-carousel .slick-prev,
-  #results-carousel .carousel-nav-left {
-    left: -50px !important; /* Adjust this to move further out */
-  }
-
-  #results-carousel .slick-next,
-  #results-carousel .carousel-nav-right {
-    right: -50px !important; /* Adjust this to move further out */
-  }
-
-  /* 2. Prevent the container from cutting off the arrows */
-  #results-carousel {
-    overflow: visible !important;
-  }
-
-  /* 3. Optional: Ensure arrows are a dark color to be visible on white space */
-  #results-carousel .slick-prev:before,
-  #results-carousel .slick-next:before {
-    color: #333 !important;
-    font-size: 24px;
-  }
-</style>
-
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Pairwise Scene Change Detection</h2>
+    <h2 class="title is-3">Multi-View Scene Change Detection</h2>
     <div class="content has-text-justified">
       <p>
         We evaluate our method across a diverse set of datasets including both real and simulated environments, 
@@ -253,46 +227,64 @@
       </p>
     </div>
 
-    <div id="results-carousel" 
-         class="carousel results-carousel" 
-         style="border: none; box-shadow: none; background: none; outline: none; overflow: visible;" 
-         data-slides-to-show="1"> 
-      
-      <div class="item item-layer4" style="border: none; box-shadow: none;">
-        <img src="./static/images/changesim_0000_Layer-4.png" alt="Layer 4 Reconstruction">
-      </div>
+    <div style="padding: 0 50px;"> 
+      <div id="results-carousel" 
+           class="carousel results-carousel" 
+           style="border: none; box-shadow: none; background: none; outline: none;" 
+           data-slides-to-show="1"> 
+        
+        <div class="item item-layer4" style="border: none; box-shadow: none;">
+          <img src="./static/images/m2m_1.png" alt="Layer 4 Reconstruction">
+        </div>
 
-      <div class="item item-layer3" style="border: none; box-shadow: none;">
-        <img src="./static/images/changesim_0001_Layer-3.png" alt="Layer 3 Reconstruction">
-      </div>
+        <div class="item item-layer3" style="border: none; box-shadow: none;">
+          <img src="./static/images/m2m_2.png" alt="Layer 3 Reconstruction">
+        </div>
 
-      <div class="item item-layer2" style="border: none; box-shadow: none;">
-        <img src="./static/images/changesim_0002_Layer-2.png" alt="Layer 2 Reconstruction">
-      </div>
+        <div class="item item-layer2" style="border: none; box-shadow: none;">
+          <img src="./static/images/m2m_3.png" alt="Layer 2 Reconstruction">
+        </div>
 
-      <div class="item item-layer1" style="border: none; box-shadow: none;">
-        <img src="./static/images/changesim_0003_Layer-1.png" alt="Layer 1 Reconstruction">
-      </div>
-      
-      <div class="item item-layer4" style="border: none; box-shadow: none;">
-        <img src="./static/images/vlcmu_0000_Layer-4.png" alt="Layer 4 Reconstruction">
-      </div>
+        <div class="item item-layer1" style="border: none; box-shadow: none;">
+          <img src="./static/images/m2m_4.png" alt="Layer 1 Reconstruction">
+        </div>
+        
+        <div class="item item-layer4" style="border: none; box-shadow: none;">
+          <img src="./static/images/m2m_5.png" alt="Layer 4 Reconstruction">
+        </div>
 
-      <div class="item item-layer3" style="border: none; box-shadow: none;">
-        <img src="./static/images/vlcmu_0001_Layer-3.png" alt="Layer 3 Reconstruction">
-      </div>
+        <div class="item item-layer3" style="border: none; box-shadow: none;">
+          <img src="./static/images/m2m_6.png" alt="Layer 3 Reconstruction">
+        </div>
 
-      <div class="item item-layer2" style="border: none; box-shadow: none;">
-        <img src="./static/images/vlcmu_0002_Layer-2.png" alt="Layer 2 Reconstruction">
-      </div>
+        <div class="item item-layer2" style="border: none; box-shadow: none;">
+          <img src="./static/images/m2m_7.png" alt="Layer 2 Reconstruction">
+        </div>
 
-      <div class="item item-layer1" style="border: none; box-shadow: none;">
-        <img src="./static/images/vlcmu_0003_Layer-1.png" alt="Layer 1 Reconstruction">
+        <div class="item item-layer1" style="border: none; box-shadow: none;">
+          <img src="./static/images/m2m_8.png" alt="Layer 1 Reconstruction">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<style>
+  /* Force arrows to stay at the very edges of the new padded area */
+  .results-carousel .slick-prev,
+  .results-carousel .carousel-nav-left {
+    left: 0px !important;
+  }
+  .results-carousel .slick-next,
+  .results-carousel .carousel-nav-right {
+    right: 0px !important;
+  }
+  /* Make arrows darker so they are visible on the white padding */
+  .results-carousel .slick-prev:before,
+  .results-carousel .slick-next:before {
+    color: #4a4a4a !important;
+  }
+</style>
     
 <section class="section">
   <div class="container is-max-desktop">
