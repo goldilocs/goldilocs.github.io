@@ -214,16 +214,12 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Pairwise Scene Change Detection</h2>
+    <h2 class="title is-3">Multi-View Scene Change Detection</h2>
     <div class="content has-text-justified">
       <p>
-        We evaluate our method across a diverse set of datasets including both real and simulated environments, 
-        indoor and outdoor scenes, and various types of change. Our results provide color-coded labels 
-        (<span style="color: rgb(0, 141, 199); font-weight: 600;">Added</span>, 
-        <span style="color: rgb(254, 98, 101); font-weight: 600;">Removed</span>, 
-        <span style="color: rgb(67, 170, 139); font-weight: 600;">Moved</span>, 
-        <span style="color: rgb(135, 115, 203); font-weight: 600;">Replaced</span>) 
-        even with binary GT and can exceed its accuracy, as annotations are often coarse or miss small changes.
+        GOLDILOCS naturally extends from image pairs to multi-view scenarios, accommodating sets with multiple images at either or both timestamps. 
+        Compared to alternative approaches, GOLDILOCS is 10–100× faster than 3D Gaussian Splatting or NeRF-based methods, 
+        achieving superior benchmark performance without requiring auxiliary views or camera parameters.
       </p>
     </div>
 
